@@ -1,13 +1,13 @@
-import catetos from './catetos.js';
+import formulario from './formulario.js';
 export default {
     btn: document.querySelector("#boton"),
     click() {
         this.btn.addEventListener("click", (event) =>{
-            this.calcular(...catetos.data());
+            this.calcular(...formulario.data());
         })
     },
-    calcular(c1,c2) {
+    calcular(r,h) {
         
-        alert(`La Hipotenusa del triangulo con catetos ${c1} y ${c2} es ${Math.hypot(c1,c2)}`);
+        alert(`El Area Lateral del Cilindro de Radio ${r} y Altura ${h} es ${2 * Math.PI * r * h} y su Volumen es ${Math.PI * Math.pow(r,2) * h}`);
     }
 }
